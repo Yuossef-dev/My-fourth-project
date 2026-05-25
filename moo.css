@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, p, a, .logo {
+    font-family: "Edu AU VIC WA NT Guides", cursive !important;
+}
+
+body {
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+    line-height: 1.6;
+}
+
+/* بداية الهيدر */
+.header {
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: row-reverse; */
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #1a3c34;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-size: 22px;
+    margin: 0;
+}
+
+.link {
+    display: flex;
+    gap: 20px;
+    flex-direction: row-reverse;
+}
+
+.link a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    font-weight: 500;
+    font-size: 20px;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 15px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.link a:hover {
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background: #d4af37;
+}
+/* نهاية الهيدر  */
+
+/* بداية القسم الاول */
+.one {
+    background: #F9F7F2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.one h1 {
+    font-size: 50px;
+    color: #1A3932;
+    margin-bottom: 20px;
+}
+
+.one p {
+    font-size: 20px;
+    color: #1A3932;
+    margin-bottom: 30px;
+    width: 60%;
+    text-align: center;
+}
+
+.one a {
+    color: #F9F7F2;
+    background: #C5A059;
+    padding: 10px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.4s;
+    border: 1px solid #C5A059;
+}
+
+.one a:hover {
+    color: #1A3932;
+    background: #F9F7F2;
+    font-weight: 600;
+    border: 1px solid #C5A059;
+}
+/* نهاية القسم الاول */
+
+/* بداية القسم الثاني */
+.two {
+    background: #1A3932;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    width: 100%;
+    padding: 40px 5%; 
+    gap: 30px;
+    justify-content: center;
+    align-items: start;
+    min-height: 100vh;
+}
+
+@media (max-width: 992px) {
+    .two {
+        grid-template-columns: repeat(2, 1fr); /* كارتين في السطر للشاشات المتوسطة */
+    }
+}
+
+@media (max-width: 600px) {
+    .two {
+        grid-template-columns: 1fr; /* كارت واحد في السطر للموبايل */
+    }
+}
+
+.overlay {
+    width: 100%; 
+    max-width: 100%; /* شيلنا الـ 350px عشان يفرش */
+    background: #ffffff;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.overlay:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgb(255, 255, 255);
+    border-color: #1A3932;
+}
+
+.overlay img {
+    width: 175PX;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #C5A059;
+}
+
+.overlay h1 {
+    color: #1A3932;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 5px;
+}
+
+.overlay a {
+    display: inline-block;
+    color: #F9F7F2;
+    background: #1A3932;
+    padding: 5px 50px;
+    border-radius: 5px;
+    border: 1px solid #C5A059;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.overlay a:hover {
+    background: #C5A059;
+    color: #1A3932;
+}
+/* نهاية القسم الثاني */
+
+
+/* نهاية القسم الثاني وبداية القسم الثالث */
+.three {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.three h1 {
+    font-size: 40px;
+    color: #1A3932;
+    margin-bottom: 20px;
+}
+
+.three p {
+    font-size: 20px;
+    color: #1A3932;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.links-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* شيلنا الـ row-reverse لأن الأيقونة بقت لوحدها */
+}
+
+.links-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* ضبط الأبعاد عشان الزرار يبقى مربع مظبوط */
+    width: 60px;
+    height: 60px;
+    
+    border: 1px solid #C5A059;
+    background: #1A3932;
+    color: #ffffff;
+    font-size: 24px; /* كبرنا حجم الأيقونة شوية */
+    text-decoration: none;
+    
+    /* الحركة دي بتخلي الزرار دائري تماماً */
+    border-radius: 50%; 
+    
+    transition: 0.4s;
+}
+
+.links-container a:hover {
+    background: #C5A059;
+    color: #1A3932;
+    border-color: #1A3932;
+    transform: scale(1.1); /* تأثير خفيف بيكبر الأيقونة لما تقف عليها */
+}
